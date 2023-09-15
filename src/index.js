@@ -1,7 +1,7 @@
 import './assets/global.scss';
 
 import Task from './domain/model/Task';
-import { Button } from './presentation/ui-kit/Button';
+import {TaskForm} from './presentation/components/TaskForm';
 
 const task = new Task(
   'Новая задача',
@@ -9,13 +9,6 @@ const task = new Task(
   new Date(),
 );
 
-const button = new Button(() => {
-  console.log(task.title, task.description, task.createdAt);
-}, 'Нажми меня');
+const form = new TaskForm((data) => console.log(data));
 
-const anotherButton = new Button(() => {
-  console.log('Сообщение');
-}, 'Другая кнопка');
-
-document.body.appendChild(button.render());
-document.body.appendChild(anotherButton.render());
+document.body.appendChild(form.render());

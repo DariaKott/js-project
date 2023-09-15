@@ -6,7 +6,9 @@ class Button {
     this.text = text;
   }
 
-  onClickHandler = () => {
+  onClickHandler = (e) => {
+    e.preventDefault();
+
     this.onClick();
   };
 
