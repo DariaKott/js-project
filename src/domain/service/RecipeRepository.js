@@ -1,5 +1,4 @@
 import Recipe from "../model/Recipe";
-import recipe from "../model/Recipe";
 
 const APP_ID = '6a959212';
 const APP_KEY = 'ce6bb34f67bd4cc03132eac7e3c38273';
