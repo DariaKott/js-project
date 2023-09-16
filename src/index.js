@@ -1,14 +1,18 @@
 import './assets/global.scss';
-
-import Task from './domain/model/Task';
 import {TaskForm} from './presentation/components/TaskForm';
+import RecipeRepository from "./domain/service/RecipeRepository";
+import {Recipes} from "./presentation/components/Recipes";
 
-const task = new Task(
-  'Новая задача',
-  'Сделать что-то очень важное.',
-  new Date(),
-);
+const repository = new RecipeRepository();
+const recipes = new Recipes();
 
-const form = new TaskForm((data) => console.log(data));
+const onSubmit = async (data) => {
+  const result = await repository.find(data.query);
+
+  recipes.update(result);
+}
+
+const form = new TaskForm(onSubmit);
 
 document.body.appendChild(form.render());
+document.body.appendChild(recipes.render());

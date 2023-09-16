@@ -14,7 +14,7 @@ class TaskForm {
   };
 
   onInputChange = (value) => {
-    this.#data = { value }
+    this.#data = { query: value }
   }
 
   render() {
