@@ -14,6 +14,7 @@ class Input {
 
     input.addEventListener('change', this.onChangeHandler);
     input.className = 'input';
+    input.placeholder = 'Enter an ingredient';
 
     return input;
   }

@@ -4,7 +4,7 @@ const APP_ID = '6a959212';
 const APP_KEY = 'ce6bb34f67bd4cc03132eac7e3c38273';
 
 class RecipeRepository {
-  async find(query){
+  async find(query) {
     const response = await fetch(
       `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=${encodeURI(query)}`
     );
