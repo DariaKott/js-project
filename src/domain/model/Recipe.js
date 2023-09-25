@@ -1,10 +1,13 @@
 class Recipe {
   #url;
   #image;
+  #title;
 
-  constructor(url, image) {
+  constructor(url, image, title) {
     this.#url = url;
     this.#image = image;
+    this.#title = title;
+
   }
 
   get url() {
@@ -13,6 +16,10 @@ class Recipe {
 
   get image() {
     return this.#image;
+  }
+
+  get title() {
+    return this.#title;
   }
 }
 

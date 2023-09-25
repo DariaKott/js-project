@@ -1,7 +1,7 @@
 import './assets/global.scss';
-import {TaskForm} from './presentation/components/TaskForm';
+import { TaskForm } from './presentation/components/TaskForm';
 import RecipeRepository from "./domain/service/RecipeRepository";
-import {Recipes} from "./presentation/components/Recipes";
+import { Recipes } from "./presentation/components/Recipes";
 
 const repository = new RecipeRepository();
 const recipes = new Recipes();
@@ -14,5 +14,7 @@ const onSubmit = async (data) => {
 
 const form = new TaskForm(onSubmit);
 
-document.body.appendChild(form.render());
-document.body.appendChild(recipes.render());
+const dynamicElements = document.getElementById('dynamic-elements');
+
+dynamicElements.appendChild(form.render());
+dynamicElements.appendChild(recipes.render());

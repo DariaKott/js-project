@@ -3,7 +3,6 @@ class Recipes {
   #recipes = [];
 
   update(recipes) {
-    console.log('DEBUG', recipes);
     this.#recipes = recipes;
 
     this.render();
@@ -22,7 +21,7 @@ class Recipes {
       const link = document.createElement('a');
 
       link.href = recipe.url;
-      link.innerText = 'Link';
+      link.innerText = recipe.title;
 
       this.#block.appendChild(link);
     });
