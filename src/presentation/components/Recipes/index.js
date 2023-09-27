@@ -11,7 +11,7 @@ class Recipes {
   render() {
     this.#block.innerHTML = '';
 
-    this.#recipes.forEach((recipe) => {
+    this.#recipes.forEach(async (recipe) => {
       const image = document.createElement('img');
 
       image.src = recipe.image;
@@ -20,10 +20,23 @@ class Recipes {
 
       const link = document.createElement('a');
 
+
       link.href = recipe.url;
+
       link.innerText = recipe.title;
 
       this.#block.appendChild(link);
+
+
+      const calories = document.createElement('p');
+      calories.innerText = `Calories: ${recipe.calories}`;
+      this.#block.appendChild(calories);
+
+
+      const cautions = document.createElement('p');
+      cautions.innerText = `Cautions: ${recipe.cautions}`;
+      this.#block.appendChild(cautions);
+
     });
 
     return this.#block;

@@ -1,6 +1,6 @@
 import './styles.scss';
-import {Input} from "../../ui-kit/Input";
-import {Button} from "../../ui-kit/Button";
+import { Input } from "../../ui-kit/Input";
+import { Button } from "../../ui-kit/Button";
 
 class TaskForm {
   #data = {};
@@ -24,7 +24,7 @@ class TaskForm {
     form.className = 'task-form';
 
     const input = new Input(this.onInputChange);
-    const button = new Button(this.onSubmitHandler, 'Отправить')
+    const button = new Button(this.onSubmitHandler, 'Search')
 
     form.appendChild(input.render());
     form.appendChild(button.render());

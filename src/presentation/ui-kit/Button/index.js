@@ -3,7 +3,7 @@ import './styles.scss';
 class Button {
   constructor(onClick, text) {
     this.onClick = onClick;
-    this.text = 'Search';
+    this.text = text;
   }
 
   onClickHandler = (e) => {

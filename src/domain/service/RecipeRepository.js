@@ -17,6 +17,8 @@ class RecipeRepository {
         recipe.url,
         recipe.image,
         recipe.label,
+        recipe.calories,
+        recipe.cautions,
       ));
     });
 
