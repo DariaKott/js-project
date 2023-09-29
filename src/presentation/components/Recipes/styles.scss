@@ -1,0 +1,11 @@
+.recipes {
+    &__item {
+        &_odd {
+            background: bisque;
+        }
+
+        &_even {
+            background: coral;
+        }
+    }
+}

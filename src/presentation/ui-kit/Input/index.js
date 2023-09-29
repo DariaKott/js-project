@@ -20,8 +20,8 @@ class Input {
 
     // }
 
-    // if (!/^[a-zA-Z]+$/.test(value)) {
-    if (!isNaN(value) || /[a-zA-Z]+\d*/.test(value)) {
+    if (!/^[a-zA-Z]+$/.test(value)) {
+      // if (!isNaN(value) || /[a-zA-Z]+\d*/.test(value)) {
       // Удаляем существующее сообщение об ошибке, если оно существует
       const existingErrorMessage = document.querySelector('.error');
       if (existingErrorMessage) {
