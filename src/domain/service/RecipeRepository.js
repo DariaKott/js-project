@@ -1,3 +1,4 @@
+//Здесь создаем функцию, которая будет получать информацию из API
 import Recipe from "../model/Recipe";
 
 const APP_ID = '6a959212';

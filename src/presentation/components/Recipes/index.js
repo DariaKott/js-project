@@ -1,3 +1,4 @@
+//Здесь создаем класс Recipes, который будет выводить информацию о рецептах на странице
 class Recipes {
   #block = document.createElement('div');
   #recipes = [];
