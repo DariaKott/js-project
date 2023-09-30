@@ -31,8 +31,13 @@ class Item {
         calories.innerText = "Calories: " + Math.round(this.#recipe.calories);
         this.#block.appendChild(calories);
 
+
+        const cautionsText = Array.isArray(this.#recipe.cautions) && this.#recipe.cautions.length > 0
+            ? this.#recipe.cautions.join(', ')  // Если массив не пуст, объединяем его элементы в строку
+            : "None";  // Если массив пуст, присваиваем "None"
+
         const cautions = document.createElement('p');
-        cautions.innerText = "Cautions: " + this.#recipe.cautions;
+        cautions.innerText = "Cautions: " + cautionsText;
         this.#block.appendChild(cautions);
 
         return this.#block;

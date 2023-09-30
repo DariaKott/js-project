@@ -1,11 +1,19 @@
-.recipes {
-    &__item {
-        &_odd {
-            background: bisque;
-        }
+// .recipes {
+//     &__item {
 
-        &_even {
-            background: coral;
-        }
-    }
+//         &_odd {
+//             background: url('https://static.vecteezy.com/system/resources/previews/005/887/016/original/paper-note-isolated-on-a-minimalist-boho-style-background-design-eps10-great-to-be-used-as-a-paper-note-with-high-quality-background-design-free-vector.jpg');
+//         }
+
+//         &_even {
+//             background: url('https://static.vecteezy.com/system/resources/previews/005/887/016/original/paper-note-isolated-on-a-minimalist-boho-style-background-design-eps10-great-to-be-used-as-a-paper-note-with-high-quality-background-design-free-vector.jpg');
+//         }
+//     }
+// }
+
+.item {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/005/887/016/original/paper-note-isolated-on-a-minimalist-boho-style-background-design-eps10-great-to-be-used-as-a-paper-note-with-high-quality-background-design-free-vector.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
