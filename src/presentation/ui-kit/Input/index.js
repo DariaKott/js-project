@@ -9,12 +9,12 @@ class Input {
     const value = e.target.value;
 
     // Проверяем введенное значение на наличие опечаток или цифр
-    if (!isNaN(value) || /[a-zA-Z]+\d*/.test(value)) {
-      const errorMessage = document.createElement('p');
-      errorMessage.className = 'error';
-      errorMessage.textContent = ":( Sorry, we don't speak Elvish.Please switch to human";
-      document.body.appendChild(errorMessage);
-    }
+    // if (!isNaN(value) || /[a-zA-Z]+\d*/.test(value)) {
+    //   const errorMessage = document.createElement('p');
+    //   errorMessage.className = 'error';
+    //   errorMessage.textContent = ":( Sorry, we don't understand Elvish. Please switch to human";
+    //   document.body.appendChild(errorMessage);
+    // }
 
     this.onChange(value);
   };
