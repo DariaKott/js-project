@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Croissant+One&display=swap');
+@use 'fonts' as f;
+@use 'colors' as c;
+
 
 * {
   box-sizing: border-box;
@@ -31,30 +33,25 @@ html {
 
 .header-style {
   background-blend-mode: screen;
-  background:
-    linear-gradient(limegreen, transparent),
-    linear-gradient(90deg, skyblue, transparent),
-    linear-gradient(-90deg, coral, transparent);
+  background: c.$header_footer-gradient;
 }
 
 .footer-style {
-  background-blend-mode: screen;
-  background:
-    linear-gradient(limegreen, transparent),
-    linear-gradient(90deg, skyblue, transparent),
-    linear-gradient(-90deg, coral, transparent),
+  //background-blend-mode: screen;
+  background-color: green;
+  // linear-gradient(limegreen, transparent),
+  // linear-gradient(90deg, skyblue, transparent),
+  // linear-gradient(-90deg, coral, transparent),
 }
 
 .header-text {
   display: flex;
   justify-content: center;
-  font-family: 'Comfortaa', cursive;
-  font-family: 'Croissant One', cursive;
+  font-family: f.$header_footer;
 }
 
 .footer-text {
   display: flex;
   justify-content: end;
-  font-family: 'Comfortaa', cursive;
-  font-family: 'Croissant One', cursive;
+  font-family: f.$header_footer;
 }

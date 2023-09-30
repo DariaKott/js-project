@@ -1,19 +1,27 @@
+@use "../../../assets/fonts.scss" as f;
+
+
+
+.item {
+    background-image: url('../../../assets/background_img.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 0.3rem;
+}
+
+
+
+//Так можно делать, если нужно стилизовать построчно, но нам тут так пока не надо
 // .recipes {
 //     &__item {
 
 //         &_odd {
-//             background: url('https://static.vecteezy.com/system/resources/previews/005/887/016/original/paper-note-isolated-on-a-minimalist-boho-style-background-design-eps10-great-to-be-used-as-a-paper-note-with-high-quality-background-design-free-vector.jpg');
+//             background: green;
 //         }
 
 //         &_even {
-//             background: url('https://static.vecteezy.com/system/resources/previews/005/887/016/original/paper-note-isolated-on-a-minimalist-boho-style-background-design-eps10-great-to-be-used-as-a-paper-note-with-high-quality-background-design-free-vector.jpg');
+//             background: greenyellow;
 //         }
 //     }
 // }
-
-.item {
-    background-image: url('https://static.vecteezy.com/system/resources/previews/005/887/016/original/paper-note-isolated-on-a-minimalist-boho-style-background-design-eps10-great-to-be-used-as-a-paper-note-with-high-quality-background-design-free-vector.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}

@@ -9,7 +9,7 @@ class RecipeRepository {
   async find(query) {
     try {
       const response = await fetch(
-        `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=${encodeURI(query)}`
+        `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=${encodeURI(query)}&random=true`
       );
 
       if (!response.ok) {
@@ -17,6 +17,16 @@ class RecipeRepository {
       }
 
       const data = await response.json();
+
+      if (Array.isArray(data.hits) && data.hits.length === 0) {
+        // Если сервер вернул пустой массив, выходит сообщение с ошибкой
+        //console.error("Сервер вернул пустой массив.");
+
+        const emptyArray = document.createElement('p');
+        emptyArray.innerText = "Nothing found. Check the input";
+        const message = document.getElementById('dynamic-elements');
+        message.appendChild(emptyArray);
+      }
 
       const result = [];
 
@@ -33,14 +43,14 @@ class RecipeRepository {
       return result;
     }
     catch (error) {
-      console.log("Error!", error.message);
+      //console.log("Error!", error.message);
 
-      const errorM = document.createElement('p');
-      errorM.innerText = error.message;
-      const m = document.getElementById('dynamic-elements');
-      m.appendChild(errorM);
+      const errorMassage = document.createElement('p');
+      errorMassage.innerText = error.message;
+      const errorShow = document.getElementById('dynamic-elements');
+      errorShow.appendChild("The server is unavailable", errorMassage);
 
-      //Возвращаем объек ошибки с помощью класса, прописанного в domain/entity/Error.js и импортированного в начале
+      //Возвращаем объек ошибки с помощью класса, прописанного в domain/Error.js и импортированного в начале
       return new ErrorObj(error.message);
     }
   }

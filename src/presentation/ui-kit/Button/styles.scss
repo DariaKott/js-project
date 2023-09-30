@@ -1,13 +1,14 @@
+@use "../../../assets/colors.scss" as c;
+
 .button {
   margin-left: 1rem;
   font-size: 0.5rem;
-  font-family: 'Comfortaa', cursive;
-  font-family: 'Croissant One', cursive;
-  line-height: 125%;
-  background: skyblue;
-  border: skyblue;
-  border-radius: 20px;
+  font-family: f.$header_footer;
   font-weight: 300;
+  line-height: 125%;
+  background: c.$bg-color-button;
+  border: c.$bg-color-button;
+  border-radius: 20px;
   cursor: pointer;
 
   &:active {

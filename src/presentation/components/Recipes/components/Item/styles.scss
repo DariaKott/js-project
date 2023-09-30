@@ -1,3 +1,6 @@
+@use "../../../assets/fonts.scss" as f;
+
+
 .item {
     display: flex;
     flex-direction: column;
@@ -11,4 +14,7 @@
     &__image {
         display: block;
     }
+
+    font-family: f.$recipe_text;
+
 }
