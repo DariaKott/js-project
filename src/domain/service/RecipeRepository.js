@@ -49,7 +49,7 @@ class RecipeRepository {
       const message = document.getElementById('dynamic-elements');
       message.appendChild(error2);
 
-      //Возвращаем объек ошибки с помощью класса, прописанного в domain/Error.js и импортированного в начале
+      //Возвращаем объект ошибки с помощью класса, прописанного в domain/Error.js и импортированного в начале
       return new ErrorObj(error.message);
     }
   }

@@ -19,6 +19,7 @@ class Item {
 
         const link = document.createElement('a');
         link.className = 'item__link';
+        link.target = "_blank"; // Открывать в новом окне
         link.href = this.#recipe.url;
         link.innerText = this.#recipe.title;
         this.#block.appendChild(link);

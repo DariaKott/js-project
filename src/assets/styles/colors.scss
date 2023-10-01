@@ -1,0 +1,17 @@
+$bg-color-button: skyblue; //Фоновый цвет кнопки и ссылки
+
+$header_footer-gradient: linear-gradient(limegreen, transparent),
+    linear-gradient(90deg, skyblue, transparent),
+    linear-gradient(-90deg, coral, transparent); //Градиент хэдера и футера
+
+$hover-color: coral; //Цвет ссылки при наведении на нее
+
+$visited-color: #800080; //Цвет ссылки, которую открывали
+
+$image-border-color: tan; //Цвет рамки вокргу картинки и калорий с аллергенами
+
+$border-bottom-color: rgba(15, 122, 252, 0.2); //Цвет полоски под ссылкой
+
+$hover-border-bottom-color: rgba(208, 64, 0, 0.2); // Цвет полоски пол ссылкой при наведении на нее
+
+$visited-border-bottom-color: rgba(128, 0, 128, 0.2); // Цвет полоски под ссылкой, которую открывали

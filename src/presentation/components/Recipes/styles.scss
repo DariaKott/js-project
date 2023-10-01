@@ -1,8 +1,8 @@
-@use "../../../assets/fonts.scss" as f;
+@use "../../../assets/styles/fonts.scss" as f;
 
 
 .item {
-    background-image: url('../../../assets/background_img.jpg');
+    background-image: url('../../../assets/img/background_img.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

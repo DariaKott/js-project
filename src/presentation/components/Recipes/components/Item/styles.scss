@@ -1,5 +1,5 @@
-@use "../../../../../assets/fonts.scss" as f;
-@use "../../../../../assets/colors.scss" as c;
+@use "../../../../../assets/styles/fonts.scss" as f;
+@use "../../../../../assets/styles/colors.scss" as c;
 
 
 
@@ -15,20 +15,26 @@
         display: block;
         text-align: center;
         font-weight: 600;
-        padding-left: 5em;
-        padding-right: 5em;
+        margin-left: 5em;
+        margin-right: 5em;
 
         text-decoration: none;
         color: c.$bg-color-button;
+        border-bottom: 3px solid;
+        border-bottom-color: c.$border-bottom-color;
+
 
         &:hover {
             text-decoration: none;
             color: c.$hover-color;
+            border-bottom-color: c.$hover-border-bottom-color;
+
         }
 
         &:visited {
             text-decoration: none;
             color: c.$visited-color;
+            border-bottom-color: c.$visited-border-bottom-color;
         }
 
     }
