@@ -1,0 +1,10 @@
+//Cтили для вывода ошибки на странице: 
+
+@use "../../../assets/colors.scss" as c;
+@use "../../../assets/fonts.scss" as f;
+
+.error-msg {
+    padding-left: 5em;
+    color: c.$bg-color-button;
+    font-family: f.$recipe_text;
+}
