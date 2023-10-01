@@ -9,8 +9,11 @@ const APP_KEY = 'ce6bb34f67bd4cc03132eac7e3c38273';
 class RecipeRepository {
   async find(query) {
     try {
+      //const from = Math.floor(Math.random() * 100); // случайное число от 0 до 99
+      const randomParam = Math.random(); // Генерирует случайное число между 0 и 1
+
       const response = await fetch(
-        `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=${encodeURI(query)}`
+        `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=${encodeURI(query)}&randomParam=${randomParam}`
       );
 
       if (!response.ok) {
