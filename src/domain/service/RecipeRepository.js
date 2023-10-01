@@ -23,7 +23,7 @@ class RecipeRepository {
       if (Array.isArray(data.hits) && data.hits.length === 0) {
         // Если сервер вернул пустой массив, выводим сообщение с ошибкой:
 
-        const error1 = new ErrorMsg("Nothing found. Check the input").render();
+        const error1 = new ErrorMsg(`Nothing found for \"${query}\". Try again`).render();
         const message = document.getElementById('dynamic-elements');
         message.appendChild(error1);
       }

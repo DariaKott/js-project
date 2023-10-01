@@ -1,4 +1,4 @@
-import './assets/global.scss';
+import './assets/styles/global.scss';
 import { TaskForm } from './presentation/components/TaskForm';
 import RecipeRepository from "./domain/service/RecipeRepository";
 import { Recipes } from "./presentation/components/Recipes";
@@ -9,9 +9,8 @@ const recipes = new Recipes();
 const onSubmit = async (data) => {
   //Проверка на наличие сообщений об ошибке на странице:
   const existingErrorMsg = document.querySelector('.error-msg');
-
+  // Если элемент существует, удаляем его:
   if (existingErrorMsg) {
-    // Если элемент существует, удаляем его
     existingErrorMsg.remove();
   }
 
