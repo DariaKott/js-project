@@ -9,7 +9,7 @@ class RecipeRepository {
   async find(query) {
     try {
       const response = await fetch(
-        `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=${encodeURI(query)}&random=true`
+        `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}&q=${encodeURI(query)}`
       );
 
       if (!response.ok) {

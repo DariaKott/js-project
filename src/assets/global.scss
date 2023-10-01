@@ -37,11 +37,8 @@ html {
 }
 
 .footer-style {
-  //background-blend-mode: screen;
-  background-color: green;
-  // linear-gradient(limegreen, transparent),
-  // linear-gradient(90deg, skyblue, transparent),
-  // linear-gradient(-90deg, coral, transparent),
+  background-blend-mode: screen;
+  background: c.$header_footer-gradient;
 }
 
 .header-text {

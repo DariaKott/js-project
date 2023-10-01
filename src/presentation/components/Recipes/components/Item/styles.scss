@@ -1,4 +1,6 @@
 @use "../../../../../assets/fonts.scss" as f;
+@use "../../../../../assets/colors.scss" as c;
+
 
 
 .item {
@@ -9,12 +11,45 @@
     &__link {
         display: block;
         text-align: center;
+        font-weight: 600;
+
+        text-decoration: none;
+        color: c.$bg-color-button;
+        border-bottom: 1.5px solid;
+        border-bottom-color: rgba(15, 122, 252, 0.2);
+
+        &:hover {
+            text-decoration: none;
+            color: coral;
+            border-bottom-color: rgba(208, 64, 0, 0.2);
+        }
+
+        &:visited {
+            text-decoration: none;
+            //color: #800080;
+            color: limegreen;
+            border-bottom-color: rgba(128, 0, 128, 0.2);
+        }
+
     }
 
     &__image {
         display: block;
+        margin-top: 3.5em;
+        border: 3px outset tan;
+        padding: 0.1em;
+        max-width: 25%;
+        max-height: 30%;
     }
 
     font-family: f.$recipe_text;
-
 }
+
+
+
+// Это код чтобы сделать рамку как у палоройда, но у нас и так белая подложка, поэтому смотрится не очень, но пусть будет на будущее 
+// border: 10px solid #fff;
+// border-bottom: 45px solid #fff;
+// -webkit-box-shadow: 3px 3px 3px #777;
+// -moz-box-shadow: 3px 3px 3px #777;
+// box-shadow: 3px 3px 3px #777;

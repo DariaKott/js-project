@@ -1,13 +1,13 @@
 @use "../../../assets/fonts.scss" as f;
 
 
-
 .item {
     background-image: url('../../../assets/background_img.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     margin-bottom: 0.3rem;
+    font-family: f.$recipe_text;
 }
 
 
