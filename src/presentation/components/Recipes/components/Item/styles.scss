@@ -7,28 +7,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: f.$recipe_text;
+    padding-bottom: 3em;
+
 
     &__link {
         display: block;
         text-align: center;
         font-weight: 600;
+        padding-left: 5em;
+        padding-right: 5em;
 
         text-decoration: none;
         color: c.$bg-color-button;
-        border-bottom: 1.5px solid;
-        border-bottom-color: rgba(15, 122, 252, 0.2);
 
         &:hover {
             text-decoration: none;
-            color: coral;
-            border-bottom-color: rgba(208, 64, 0, 0.2);
+            color: c.$hover-color;
         }
 
         &:visited {
             text-decoration: none;
-            //color: #800080;
-            color: limegreen;
-            border-bottom-color: rgba(128, 0, 128, 0.2);
+            color: c.$visited-color;
         }
 
     }
@@ -36,14 +36,27 @@
     &__image {
         display: block;
         margin-top: 3.5em;
-        border: 3px outset tan;
+        border: 3px outset c.$image-border-color;
         padding: 0.1em;
         max-width: 25%;
         max-height: 30%;
     }
 
-    font-family: f.$recipe_text;
+    &__calories {
+        display: block;
+        font-size: 0.5em;
+        color: c.$image-border-color;
+        margin: 0;
+    }
+
+    &__cautions {
+        display: block;
+        font-size: 0.5em;
+        color: c.$image-border-color;
+        margin: 0;
+    }
 }
+
 
 
 

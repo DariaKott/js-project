@@ -13,21 +13,18 @@ class Item {
 
     render() {
         const image = document.createElement('img');
-
         image.className = 'item__image';
         image.src = this.#recipe.image;
-
         this.#block.appendChild(image);
 
         const link = document.createElement('a');
-
         link.className = 'item__link';
-
         link.href = this.#recipe.url;
         link.innerText = this.#recipe.title;
         this.#block.appendChild(link);
 
         const calories = document.createElement('p');
+        calories.className = 'item__calories';
         calories.innerText = "Calories: " + Math.round(this.#recipe.calories);
         this.#block.appendChild(calories);
 
@@ -37,6 +34,7 @@ class Item {
             : "None";  // Если массив пуст, присваиваем "None"
 
         const cautions = document.createElement('p');
+        cautions.className = 'item__cautions';
         cautions.innerText = "Cautions: " + cautionsText;
         this.#block.appendChild(cautions);
 
