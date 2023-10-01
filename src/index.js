@@ -7,6 +7,14 @@ const repository = new RecipeRepository();
 const recipes = new Recipes();
 
 const onSubmit = async (data) => {
+  //Проверка на наличие сообщений об ошибке на странице:
+  const existingErrorMsg = document.querySelector('.error-msg');
+
+  if (existingErrorMsg) {
+    // Если элемент существует, удаляем его
+    existingErrorMsg.remove();
+  }
+
   const result = await repository.find(data.query);
 
   recipes.update(result);

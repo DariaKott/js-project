@@ -1,6 +1,7 @@
 //Здесь создаем функцию, которая будет получать информацию из API
 import Recipe from "../model/Recipe";
 import ErrorObj from "../model/Error";
+import { ErrorMsg } from "../../presentation/components/ErrorMsg";
 
 const APP_ID = '6a959212';
 const APP_KEY = 'ce6bb34f67bd4cc03132eac7e3c38273';
@@ -18,14 +19,13 @@ class RecipeRepository {
 
       const data = await response.json();
 
+      //Проверяем, выдал ли сервер хоть какую-то информацию:
       if (Array.isArray(data.hits) && data.hits.length === 0) {
-        // Если сервер вернул пустой массив, выходит сообщение с ошибкой
-        //console.error("Сервер вернул пустой массив.");
+        // Если сервер вернул пустой массив, выводим сообщение с ошибкой:
 
-        const emptyArray = document.createElement('p');
-        emptyArray.innerText = "Nothing found. Check the input";
+        const error1 = new ErrorMsg("Nothing found. Check the input").render();
         const message = document.getElementById('dynamic-elements');
-        message.appendChild(emptyArray);
+        message.appendChild(error1);
       }
 
       const result = [];
@@ -43,12 +43,11 @@ class RecipeRepository {
       return result;
     }
     catch (error) {
-      //console.log("Error!", error.message);
+      //В случае, если не удалось получить данные с сервера, выведем ошибку:
 
-      const errorMassage = document.createElement('p');
-      errorMassage.innerText = error.message;
-      const errorShow = document.getElementById('dynamic-elements');
-      errorShow.appendChild("The server is unavailable", errorMassage);
+      const error2 = new ErrorMsg(`${error.message}. Server is unavalable`).render();
+      const message = document.getElementById('dynamic-elements');
+      message.appendChild(error2);
 
       //Возвращаем объек ошибки с помощью класса, прописанного в domain/Error.js и импортированного в начале
       return new ErrorObj(error.message);

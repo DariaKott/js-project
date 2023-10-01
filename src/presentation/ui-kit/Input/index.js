@@ -9,6 +9,7 @@ class Input {
     const value = e.target.value;
 
     this.onChange(value);
+    e.target.value = '';
   };
 
   render() {
