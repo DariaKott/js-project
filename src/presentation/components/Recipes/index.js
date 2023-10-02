@@ -1,7 +1,6 @@
 //Здесь создаем класс Recipes, который будет выводить информацию о рецептах на странице
 
 import { Item } from "./components/Item";
-import './styles.scss';
 
 class Recipes {
   #block = document.createElement('div');

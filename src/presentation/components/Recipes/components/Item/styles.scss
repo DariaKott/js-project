@@ -9,7 +9,11 @@
     align-items: center;
     font-family: f.$recipe_text;
     padding-bottom: 3em;
-
+    background-image: url('../../../../../assets/img/background_img.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-bottom: 0.3rem;
 
     &__link {
         display: block;
